@@ -1,0 +1,76 @@
+<% layout('/partials/biolerplate.ejs') -%>
+<body>
+    <section class="form-data">
+        <div class="main-container">
+            <div class="image-photo">
+                <img src="/image/family-lawyer.jpg" alt="lawyer">
+            </div>
+            <div class="form-contant">
+                <div class="form-related">
+                    <p class="request">
+                        REQUEST FREE COMMUNICATION
+                    </p>
+                    <h1 class="addto-card">
+                        Updata Data Intrested. <br>
+                        Appointment & Change?
+                    </h1>
+                </div>
+                <form method="post" action="/about/<%= datachart.id %>?_method=PUT">
+                <div class="input-data">
+                         <input type="text" placeholder="<%=datachart.fname %>" name="fname">
+                </div>
+                <div class="input-data">
+                         <input type="text" placeholder="<%=datachart.lname %>" name="lname">
+                </div>
+                <div class="input-data">
+                    <input type="email" placeholder="<%=datachart.email %>" name="email">
+                </div>
+                <div class="input-data">
+                         <input type="number" placeholder="<%= datachart.phone %>" name="phone">
+                </div>
+                <div class="input-data">
+                    <textarea name="description" id="name" cols="30" rows="10" placeholder="<%= datachart.description %>"></textarea>
+                </div>
+                <div class="input-data">
+                    <button type="submit" class="input-btn" name="submit">Update Chat</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <footer class="copywrite">
+        <div class="main-footer-div">
+            <div class="logo-footer">
+                <img src="/image/abvocate.png" alt="lawyer">
+               <h1 class="footer-law">LAW FIRM</h1>
+            </div>
+            <div class="footer-main">
+            <div class="head-footer">
+               <h1 class="footer-sign">Welcome</h1>
+               <p class="menu-bar">Home</p>
+               <p class="menu-bar">About</p>
+               <p class="menu-bar">Case Study</p>
+               <p class="menu-bar">Practice Area</p>
+               <p class="menu-bar">Contact</p>
+            </div>
+            <div class="head-footer">
+               <h1 class="footer-sign">Practice</h1>
+               <p class="menu-bar">Business</p>
+               <p class="menu-bar">Family law</p>
+               <p class="menu-bar">Crimenal law</p>
+               <p class="menu-bar">Social law</p>
+               <p class="menu-bar"></p>
+               <p class="menu-bar"></p>
+            </div>
+            <div class="head-footer footer-nav">
+               <h1 class="footer-sign">SignUp for Email Updates</h1>
+               <p class="menu-bar">Business</p>
+               <p class="menu-bar"> elit. Mollitia, hic accusantium.</p>
+               <p class="menu-bar" style="padding-bottom: 15px;"> consectetur adipisicing elit.!</p>
+               <input class="input-subscribe" type="email" placeholder="Type Email Address">
+               <input class="subscribe" type="button" value="Subscribe Now">
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
